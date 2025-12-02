@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% block title %}Shiva Temple | Home{% endblock %}
+{% block content %}
+<section class="hero">
+    <div>
+        <p class="eyebrow">Sri Shiva Temple</p>
+        <h1>Experience devotion, culture, and community</h1>
+        <p class="lead">Daily rituals, spiritual guidance, and service opportunities to uplift every visitor.</p>
+        <div class="button-row">
+            <a class="pill" href="/donate/">Donate</a>
+            <a class="ghost" href="/events/">View events</a>
+        </div>
+    </div>
+    <div class="hero-card">
+        <p class="eyebrow">Temple Timings</p>
+        <p>Morning: 5:00 AM – 12:30 PM<br>Evening: 4:30 PM – 9:00 PM</p>
+        <p class="small">Special darshan every Pradosham day.</p>
+    </div>
+</section>
+<section class="grid">
+    {% for highlight in highlights %}
+        <div class="card">
+            <h3>{{ highlight.title }}</h3>
+            <p>{{ highlight.description }}</p>
+        </div>
+    {% endfor %}
+</section>
+<section id="visit" class="panel">
+    <div>
+        <h2>Plan your visit</h2>
+        <p>Located in the heart of Sacred Town, easily reachable by road and rail. Facilities include parking, prasad counter, and seating areas.</p>
+    </div>
+    <div>
+        <h3>Quick links</h3>
+        <ul>
+            {% for link in cta_links %}
+                <li><a href="{{ link.href }}">{{ link.label }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+{% endblock %}

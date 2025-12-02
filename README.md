@@ -2,6 +2,7 @@
 
 A Flask-based website for a Lord Shiva temple with informational pages and a UPI-enabled donations page.
 
+
 ## Features
 - Home, About, Services, Events, Gallery, Contact, and Donations pages.
 - UPI donation QR code generation with configurable payment link and preset amounts.
