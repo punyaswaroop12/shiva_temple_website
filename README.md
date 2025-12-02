@@ -34,5 +34,5 @@ Environment variables (optional) allow you to customize donation details:
 
 ## Project layout
 - Flask app entrypoint: `app.py`.
-- Templates: `temple_site/core/templates/core/`.
-- Static assets: `temple_site/core/static/` (e.g., CSS in `css/styles.css`).
+- Templates: `templates/`.
+- Static assets: `static/` (e.g., CSS in `css/styles.css`).

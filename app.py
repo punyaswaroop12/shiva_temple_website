@@ -32,11 +32,7 @@ def load_config() -> Dict[str, object]:
 
 
 def create_app() -> Flask:
-    app = Flask(
-        __name__,
-        template_folder="temple_site/core/templates/core",
-        static_folder="temple_site/core/static",
-    )
+    app = Flask(__name__)
 
     config = load_config()
 
