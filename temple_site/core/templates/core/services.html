@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+{% block title %}Services | Shiva Temple{% endblock %}
+{% block content %}
+<section class="narrow">
+    <h1>Services &amp; Poojas</h1>
+    <p>Book rituals performed by our priests and participate in community service programs.</p>
+</section>
+<section class="grid">
+    {% for service in services %}
+        <div class="card">
+            <h3>{{ service.name }}</h3>
+            <p>{{ service.description }}</p>
+        </div>
+    {% endfor %}
+</section>
+<section class="panel">
+    <div>
+        <h3>How to book</h3>
+        <p>Email us at <a href="mailto:{{ booking_email }}">{{ booking_email }}</a> with your preferred date and details. We will confirm availability and share instructions.</p>
+    </div>
+    <div>
+        <h3>Visit in person</h3>
+        <p>Bookings can also be made at the temple office between 6:00 AM–12:00 PM and 4:30 PM–8:30 PM daily.</p>
+    </div>
+</section>
+{% endblock %}

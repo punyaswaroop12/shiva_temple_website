@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+{% block title %}Gallery | Shiva Temple{% endblock %}
+{% block content %}
+<section class="narrow">
+    <h1>Gallery</h1>
+    <p>Glimpses from the temple premises and festivities.</p>
+</section>
+<section class="gallery">
+    {% for image in images %}
+        <figure>
+            <img src="{{ image.src }}" alt="{{ image.alt }}">
+            <figcaption>{{ image.alt }}</figcaption>
+        </figure>
+    {% endfor %}
+</section>
+{% endblock %}
