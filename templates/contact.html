@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Contact | Shiva Temple{% endblock %}
+{% block content %}
+<section class="narrow">
+    <h1>Contact &amp; Directions</h1>
+    <p>We are here to help with temple visits, ritual bookings, and general inquiries.</p>
+</section>
+<section class="panel">
+    <div>
+        <h3>Reach us</h3>
+        <p>Phone: <a href="tel:{{ phone }}">{{ phone }}</a><br>Email: <a href="mailto:{{ email }}">{{ email }}</a></p>
+        <p>Address: {{ address }}</p>
+    </div>
+    <div>
+        <h3>Location</h3>
+        <p><a href="{{ map_link }}" target="_blank" rel="noreferrer">Open in Google Maps</a></p>
+        <p>Parking and wheelchair access available. Please contact us for group visit coordination.</p>
+    </div>
+</section>
+{% endblock %}
