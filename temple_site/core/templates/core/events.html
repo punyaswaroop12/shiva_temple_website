@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+{% block title %}Events | Shiva Temple{% endblock %}
+{% block content %}
+<section class="narrow">
+    <h1>Events &amp; Celebrations</h1>
+    <p>Join us for recurring poojas, festivals, and community gatherings.</p>
+</section>
+<section class="timeline">
+    {% for event in events %}
+        <div class="timeline-item">
+            <div class="timeline-date">{{ event.date }}</div>
+            <div class="timeline-content">
+                <h3>{{ event.title }}</h3>
+                <p>{{ event.details }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</section>
+{% endblock %}

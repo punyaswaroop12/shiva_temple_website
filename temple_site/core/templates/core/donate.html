@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+{% block title %}Donate | Shiva Temple{% endblock %}
+{% block content %}
+<section class="narrow">
+    <h1>Support the temple</h1>
+    <p>Your contribution sustains daily worship, community meals, and preservation of this sacred space.</p>
+</section>
+<section class="donation">
+    <div class="card">
+        <h3>UPI Donation</h3>
+        <p>Scan the QR code with any UPI app or tap the link below.</p>
+        <img class="qr" src="{{ qr_data_uri }}" alt="UPI QR for donations">
+        <p class="center"><strong>UPI ID: {{ upi_id }}</strong></p>
+        <p class="center"><a class="pill" href="{{ upi_link }}">Open in UPI app</a></p>
+        <div class="chip-row">
+            {% for amount in preset_amounts %}
+                <span class="chip">₹{{ amount }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="card">
+        <h3>Bank Transfer</h3>
+        <p>Use the details below for NEFT/IMPS donations.</p>
+        <ul class="details">
+            <li><strong>Account Name:</strong> {{ bank_details.account_name }}</li>
+            <li><strong>Account Number:</strong> {{ bank_details.account_number }}</li>
+            <li><strong>IFSC:</strong> {{ bank_details.ifsc }}</li>
+            <li><strong>Branch:</strong> {{ bank_details.branch }}</li>
+        </ul>
+        <p class="small">Please email your transaction reference to <a href="mailto:donations@shivatemple.org">donations@shivatemple.org</a> to receive an acknowledgement.</p>
+    </div>
+</section>
+<section class="panel">
+    <div>
+        <h3>How we use your support</h3>
+        <p>Funds are directed toward daily pooja, maintenance, annadanam, cultural programs, and support for local students.</p>
+    </div>
+    <div>
+        <h3>Tax receipts</h3>
+        <p>Official receipts can be issued for eligible donations. Please share your name, address, and transaction ID.</p>
+    </div>
+</section>
+{% endblock %}
